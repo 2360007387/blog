@@ -8,7 +8,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 		<link href="https://cdn.bootcss.com/weui/1.0.0/style/weui.min.css" rel="stylesheet">
 		<link href="https://cdn.bootcss.com/jquery-weui/1.0.0/css/jquery-weui.min.css" rel="stylesheet">
-		<link href="https://at.alicdn.com/t/font_mnlrbr5s591wcdi.css" rel="stylesheet">
+		<link href="https://at.alicdn.com/t/font_du3uwsronw1urf6r.css" rel="stylesheet">
 		<link rel="stylesheet" href="css/index.css" />
 	</head>
 
@@ -44,6 +44,14 @@
 								微信
 							</p>
 						</a>
+						<a href="javascript:;" class="weui-grid js_grid" id="refresh">
+							<div class="weui-grid__icon">
+								<i class="iconfont icon-shuaxin refresh"></i>
+							</div>
+							<p class="weui-grid__label">
+								刷新
+							</p>
+						</a>
 					</div>
 				</div>
 				<div id="tab2" class="weui-tab__bd-item">
@@ -73,13 +81,17 @@
 					</div>
 				</div>
 				<div id="tab3" class="weui-tab__bd-item">
-					<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
-						<div class="swiper-wrapper">
-							<div class="swiper-slide"><img src="http://pic1.5442.com/2015/0529/03/09.jpg" alt=""></div>
-							<div class="swiper-slide"><img src="http://www.cqyz.cn/upload/2015-01/15011211224334.jpg" alt=""></div>
-							<div class="swiper-slide"><img src="http://www.njkj.gov.cn/23846/23865/23866/201410/W020141022573173650295.jpg" alt=""></div>
-						</div>
+					<div class="weui-loadmore">
+						<i class="weui-loading"></i>
+						<span class="weui-loadmore__tips">正在加载</span>
 					</div>
+					<div class="weui-loadmore weui-loadmore_line">
+						<span class="weui-loadmore__tips">暂无数据</span>
+					</div>
+					<div class="weui-loadmore weui-loadmore_line weui-loadmore_dot">
+						<span class="weui-loadmore__tips"></span>
+					</div>
+					<a href="javascript:;" class="weui-btn weui-btn_primary" id="job">职业</a>
 				</div>
 
 			</div>
@@ -88,14 +100,19 @@
 		<script src="https://cdn.bootcss.com/jquery-weui/1.0.0/js/jquery-weui.min.js"></script>
 		<script src="https://cdn.bootcss.com/jquery-weui/1.0.0/js/swiper.min.js"></script>
 		<script>
-			$(function() {
-				$(".swiper-container").swiper({});
-			});
 			$("#QQ").click(function() {
 				$.toast("QQ", "text");
 			});
 			$("#weixin").click(function() {
 				$.toast("微信", "text");
+			});
+
+			$("#refresh").click(function() {
+				window.location.reload();
+			});
+			$("#job").select({
+				title: "选择职业",
+				items: ["法官", "医生", "猎人", "学生", "记者", "其他"]
 			});
 		</script>
 	</body>
