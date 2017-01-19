@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title>my blog</title>
+		<link href="http://cdn.bootcss.com/weui/1.0.0/style/weui.min.css" rel="stylesheet">
+		<link href="http://cdn.bootcss.com/jquery-weui/1.0.0/css/jquery-weui.min.css" rel="stylesheet">
+		<link href="http://at.alicdn.com/t/font_mnlrbr5s591wcdi.css" rel="stylesheet">
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+
+	<body>
+		<div class="weui-tab">
+			<div class="weui-navbar">
+				<a class="weui-navbar__item weui-bar__item--on" href="#tab1">
+					九宫格
+				</a>
+				<a class="weui-navbar__item " href="#tab2">
+					网址
+				</a>
+				<a class="weui-navbar__item" href="#tab3">
+					图片
+				</a>
+			</div>
+			<div class="weui-tab__bd">
+				<div id="tab1" class="weui-tab__bd-item weui-tab__bd-item--active">
+					<div class="weui-grids">
+						<a href="javascript:;" class="weui-grid js_grid" id="QQ">
+							<div class="weui-grid__icon">
+								<i class="iconfont icon-QQ QQ"></i>
+							</div>
+							<p class="weui-grid__label">
+								QQ
+							</p>
+						</a>
+						<a href="javascript:;" class="weui-grid js_grid" id="weixin">
+							<div class="weui-grid__icon">
+								<i class="iconfont icon-weixin weixin"></i>
+							</div>
+							<p class="weui-grid__label">
+								微信
+							</p>
+						</a>
+					</div>
+				</div>
+				<div id="tab2" class="weui-tab__bd-item">
+					<div class="weui-cells">
+						<a class="weui-cell weui-cell_access" href="https://github.com" target="_blank"> 
+							<div class="weui-cell__bd">
+								<p>github</p>
+							</div>
+							<div class="weui-cell__ft">
+							</div>
+						</a>
+						<a class="weui-cell weui-cell_access" href="http://www.jq22.com" target="_blank">
+							<div class="weui-cell__bd">
+								<p>jQuery插件</p>
+							</div>
+							<div class="weui-cell__ft">
+							</div>
+						</a>
+						<a class="weui-cell weui-cell_access" href="http://iconfont.cn/" target="_blank">
+							<div class="weui-cell__bd">
+								<p>iconfont</p>
+							</div>
+							<div class="weui-cell__ft">
+							</div>
+						</a>
+
+					</div>
+				</div>
+				<div id="tab3" class="weui-tab__bd-item">
+					<div class="swiper-container" data-space-between='10' data-pagination='.swiper-pagination' data-autoplay="1000">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide"><img src="http://pic1.5442.com/2015/0529/03/09.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://www.cqyz.cn/upload/2015-01/15011211224334.jpg" alt=""></div>
+							<div class="swiper-slide"><img src="http://www.njkj.gov.cn/23846/23865/23866/201410/W020141022573173650295.jpg" alt=""></div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+		<script src="http://cdn.bootcss.com/jquery/2.2.2/jquery.min.js"></script>
+		<script src="http://cdn.bootcss.com/jquery-weui/1.0.0/js/jquery-weui.min.js"></script>
+		<script src="http://cdn.bootcss.com/jquery-weui/1.0.0/js/swiper.min.js"></script>
+		<script>
+			$(function() {
+				$(".swiper-container").swiper({});
+			});
+			$("#QQ").click(function() {
+				$.toast("QQ", "text");
+			});
+			$("#weixin").click(function() {
+				$.toast("微信", "text");
+			});
+		</script>
+	</body>
+
+</html>
